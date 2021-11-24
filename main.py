@@ -3,7 +3,9 @@
 #Aaron Sharma
 
 #importing a module
-import random
+import time
+
+#
 
 
 #Target variable to store a random target number for the user to guess
