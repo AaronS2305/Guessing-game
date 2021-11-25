@@ -1,28 +1,31 @@
-#Number Guesseing Game version 1
+#Virus Simulator version 4
 #25/11/2021
 #Aaron Sharma
 
-#importing a module
+#To enhance the user experience by managing how text is displayed.
 import time
-
+import sys
 #welcome message
-sleep.(.75)
+time.sleep(.75)
 print("Welcome to the Pap High Virus Simulator\n Please follow the prompts")
 
 
-#List for country name
-country_name = []
-#List for number of infected
+#To store and track user input
+country_list = []
 num_infected = []
+max_length_list = 3
 
-
-#Target variable to store a random target number for the user to guess
-target = random.randint(1, 100)
-#guess variable to store user's guessed number
-
-
-Virus_data_collection = True
-
-while Virus_data_collection:
+#Asking user the name of there chosen country
+def get_infected_percentage(num):
+  num = int(num)
+  if num >= 0:
+    return (1 * int(num))
+  else:
+    print("Invalid entry")
   
-  name_country = str(input("Please enter the name of a country:"))
+try:
+  infected_percentage = input("What is the percentage of infected people in your chosen country?")
+  print(get_infected_percentage(infected_percentage))
+
+except:
+  print("Invalid entry, try again")
