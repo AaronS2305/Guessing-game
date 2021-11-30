@@ -1,6 +1,17 @@
-# Virus Game Version 5
-# 28/11/2021
+# Virus Game Version 6
+# 30/11/2021
 # Aaron Sharma
+
+
+
+
+#Enhancing User Experience
+import time
+import sys
+#Welcome Message
+time.sleep(.75)
+print("Welcome to the Papatoetoe High School Virus Simulator, please follow the prompts")
+print("")
 
 
 
@@ -14,24 +25,24 @@ country_lockdown = []
 
 
 
+
 # Function which collects country data and infected percentage
 def add_countries():
     country_add = ""
     # Loop which will keep adding countries until the user if finished
     while True:
-        country_add = input(
-            "Please write the name of the country you would like to enter. When you are finished adding countries, please type \"done\" and click enter.")
+        country_add = input("Please write the name of the country you would like to enter. When you are finished adding countries, please type \"done\" and click enter.")
         # If user has entered valid country, create it and add it to the list
         if country_add != "done":
             # Adding validiation to make user is inputting correct data
-            infected_percentage = int(
-                input("Type the current percentage of infected people for " + country_add + " and then press enter."))
+            infected_percentage = int(input("Type the current percentage of infected people for " + country_add + " and then press enter."))
             names_of_countries.append(country_add)
             infected_percentage_for_countries.append(infected_percentage)
             country_lockdown.append(False)
         # If user is finished, break out of the function
         else:
             break
+
 
 
 
@@ -98,6 +109,7 @@ def new_day(ask_country_help):
                         country_lockdown[list_index]))
         list_index += 1
     print("*** END OF DAY ***")
+
 
 
 
