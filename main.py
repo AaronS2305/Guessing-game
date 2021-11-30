@@ -33,7 +33,9 @@ def add_countries():
     while True:
         country_add = input("Please write the name of the country you would like to enter. When you are finished adding countries, please type \"done\" and click enter.")
         # If user has entered valid country, create it and add it to the list
-        if country_add != "done":
+        if country_add == "":
+            print("You have typed nothing, please try again")
+        elif country_add != "done":
             # Adding validiation to make user is inputting correct data
             infected_percentage = int(input("Type the current percentage of infected people for " + country_add + " and then press enter."))
             names_of_countries.append(country_add)
